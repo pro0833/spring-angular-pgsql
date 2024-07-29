@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="container d-flex justify-content-center" style="margin-top: 20vh;">
+      <div class="row justify-content-center w-100">
+        <div class="col-12 col-md-6 col-lg-4">
+          <form (ngSubmit)="updateUser()">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" [(ngModel)]="user.name" class="form-control" name="name" id="name" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" [(ngModel)]="user.email" class="form-control" name="email" id="email" placeholder="Enter your email">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Update User</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

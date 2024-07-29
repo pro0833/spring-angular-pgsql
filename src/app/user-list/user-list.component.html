@@ -1,0 +1,30 @@
+<div><br>
+    <h1 >CRUD OPERATIONS</h1><br>
+    <table class="table table-bordered text-center">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let idx = index">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <a class="btn btn-primary me-3" [routerLink]="['/update', user.id]">Update</a>
+            <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <!-- Add new user button -->
+    <div class="text-center">
+      <a class="btn btn-info" [routerLink]="['/create']">Add New User</a>
+    </div>
+  </div>
+  
